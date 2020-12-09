@@ -6,7 +6,7 @@ export let server: hapi.Server | undefined;
 
 export async function startService(): Promise<hapi.Server> {
   server = hapi.server({
-    port: 0,
+    port: 8080,
     host: 'localhost',
   });
   await Promise.all([registerEndpoints(server), getOrCreateDb()]);
