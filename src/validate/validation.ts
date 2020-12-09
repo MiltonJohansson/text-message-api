@@ -35,7 +35,7 @@ export function validateGetMessages() {
 export function validateDeleteMessages() {
   return {
     payload: joi.object({
-      message_ids: joi.array().items(joi.string().required()),
+      message_ids: joi.array().items(joi.string().uuid().required()),
     }),
   };
 }
