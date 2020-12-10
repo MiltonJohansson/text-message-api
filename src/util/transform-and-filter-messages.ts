@@ -12,7 +12,7 @@ export async function transformAndFilterMessages(messages: StoredInterface[], on
     );
     return messages
       .filter((message) => message.already_fetched === 0)
-      .map((message: StoredInterface) => pick(message, ['message', 'created_at']));
+      .map((message: StoredInterface) => pick(message, ['message', 'created_at', 'message_id']));
   }
-  return messages.map((message: StoredInterface) => pick(message, ['message', 'created_at']));
+  return messages.map((message: StoredInterface) => pick(message, ['message', 'created_at', 'message_id']));
 }

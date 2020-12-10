@@ -14,6 +14,7 @@ export function validateGetTransactionResponse() {
     joi.object({
       created_at: joi.number().integer().required(),
       message: joi.string().required(),
+      message_id: joi.string().uuid().required(),
     }),
   );
 }
