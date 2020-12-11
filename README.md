@@ -3,6 +3,7 @@
 Code test done in 2 hours for easy text-message-service.
 
 To test this api:
+
 1. yarn install
 2. yarn start
 3. Make http-request with base-url: https://localhost:8080 for each endpoint.
